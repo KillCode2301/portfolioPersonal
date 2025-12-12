@@ -1,120 +1,135 @@
 import { Link } from "react-router-dom";
+import Navbar from "@/components/Navbar";
+import Footer from "@/components/Footer";
+import { projects } from "@/data/projects";
+import { Experience, experiences } from "@/data/experiences";
 
-const projects = [
-  {
-    title: "Project One",
-    description: "A minimalist web application built with React and TypeScript.",
-    link: "#",
-  },
-  {
-    title: "Project Two",
-    description: "An open-source CLI tool for automating workflows.",
-    link: "#",
-  },
-  {
-    title: "Project Three",
-    description: "A mobile-first e-commerce platform with modern UX.",
-    link: "#",
-  },
-];
-
-const experiences = [
-  {
-    role: "Senior Developer",
-    company: "Tech Company",
-    period: "2022 — Present",
-    description: "Leading frontend architecture and design system development.",
-  },
-  {
-    role: "Full Stack Developer",
-    company: "Startup Inc",
-    period: "2020 — 2022",
-    description: "Built and scaled web applications from zero to production.",
-  },
-  {
-    role: "Junior Developer",
-    company: "Agency Co",
-    period: "2018 — 2020",
-    description: "Developed client websites and internal tools.",
-  },
-];
 
 const Index = () => {
   return (
     <div className="min-h-screen bg-background text-foreground">
-      {/* Navigation */}
-      <nav className="fixed top-0 left-0 right-0 z-50 bg-background/80 backdrop-blur-sm border-b border-border">
-        <div className="max-w-3xl mx-auto px-6 py-4 flex justify-between items-center">
-          <span className="text-sm font-medium tracking-wide">Portfolio</span>
-          <div className="flex gap-6 text-sm text-muted-foreground">
-            <a href="#about" className="hover:text-foreground transition-colors">About</a>
-            <a href="#projects" className="hover:text-foreground transition-colors">Projects</a>
-            <a href="#experience" className="hover:text-foreground transition-colors">Experience</a>
-            <Link to="/timer" className="hover:text-foreground transition-colors">Timer</Link>
-          </div>
-        </div>
-      </nav>
+      <Navbar />
 
       <main className="max-w-3xl mx-auto px-6 pt-32 pb-20">
         {/* Hero */}
-        <section className="mb-32">
-          <h1 className="text-4xl font-light tracking-tight mb-4">Your Name</h1>
-          <p className="text-muted-foreground text-lg">Developer & Designer</p>
+        <section className="mb-32 mt-32">
+          <h1 className="text-6xl font-light tracking-tight mb-4 mt-10">
+            Thalhath Mohamed
+          </h1>
+          <p className="text-muted-foreground text-lg">
+            Software Engineer and Entrepreneur
+          </p>
         </section>
 
         {/* About */}
         <section id="about" className="mb-32 scroll-mt-24">
-          <h2 className="text-xs uppercase tracking-widest text-muted-foreground mb-6">About</h2>
+          <h2 className="text-2xl uppercase tracking-widest text-foreground mb-6">
+            About
+          </h2>
           <p className="text-lg leading-relaxed text-foreground/90">
-            I'm a developer passionate about creating minimal, functional, and beautiful digital experiences. 
-            With a focus on clean code and thoughtful design, I build products that prioritize user experience 
-            and performance.
+            I craft simple, elegant, and high-performing digital products. From
+            mobile apps to modern web platforms, I combine development expertise
+            with hands-on AI and data-driven engineering to create smarter, more
+            intuitive user experiences. My work is guided by clarity, purpose,
+            and a commitment to building technology that feels seamless,
+            thoughtful, and beautifully functional.
           </p>
         </section>
 
         {/* Projects */}
         <section id="projects" className="mb-32 scroll-mt-24">
-          <h2 className="text-xs uppercase tracking-widest text-muted-foreground mb-8">Projects</h2>
+          <h2 className="text-2xl uppercase tracking-widest text-foreground mb-8">
+            Projects
+          </h2>
           <div className="space-y-8">
             {projects.map((project, index) => (
-              <a
+              <Link
                 key={index}
-                href={project.link}
-                className="block group p-6 -mx-6 rounded-lg hover:bg-card transition-colors"
+                to={`/project/${project.id}`}
+                className="block group p-6 -mx-6 rounded-lg hover:bg-card transition-colors border border-border"
               >
                 <h3 className="text-lg font-medium mb-2 group-hover:text-foreground transition-colors">
                   {project.title}
                 </h3>
-                <p className="text-muted-foreground text-sm">{project.description}</p>
-              </a>
+                <p className="text-muted-foreground text-sm">
+                  {project.description}
+                </p>
+              </Link>
             ))}
           </div>
         </section>
 
         {/* Experience */}
         <section id="experience" className="scroll-mt-24">
-          <h2 className="text-xs uppercase tracking-widest text-muted-foreground mb-8">Experience</h2>
+          <h2 className="text-2xl uppercase tracking-widest text-foreground mb-8">
+            Experiences
+          </h2>
           <div className="space-y-10">
-            {experiences.map((exp, index) => (
-              <div key={index} className="group">
-                <div className="flex justify-between items-baseline mb-2">
-                  <h3 className="text-lg font-medium">{exp.role}</h3>
-                  <span className="text-xs text-muted-foreground">{exp.period}</span>
-                </div>
-                <p className="text-sm text-muted-foreground mb-1">{exp.company}</p>
-                <p className="text-sm text-foreground/70">{exp.description}</p>
+            {experiences.map((experience, index) => (
+              <div key={index} className="group p-6 -mx-6 rounded-lg hover:bg-card transition-colors border border-border">
+                <h3 className="text-lg font-medium mb-2 group-hover:text-foreground transition-colors">{experience.role}</h3>
+                <p className="text-sm text-muted-foreground mb-2">{experience.company}</p>
+                <p className="text-sm text-foreground/70">{experience.description}</p>
               </div>
             ))}
+          </div>
+        </section>
+
+        {/*Connect*/}
+        <section id="connect" className="scroll-mt-24 mt-32">
+          <h2 className="text-2xl uppercase tracking-widest text-foreground mb-8">
+            Connect
+          </h2>
+          <div className="space-y-6">
+            <div>
+              <a href="mailto:thalhath@gmail.com" className="text-lg text-foreground/70 hover:text-foreground transition-colors">
+                thalhath@gmail.com
+              </a>
+            </div>
+            <div className="flex flex-wrap gap-6 items-center">
+              <a 
+                href="https://github.com/KillCode2301" 
+                target="_blank" 
+                rel="noopener noreferrer" 
+                aria-label="GitHub" 
+                className="hover:opacity-70 transition-opacity"
+              >
+                <img src="/icons/github.svg" alt="GitHub" className="w-8 h-8" />
+              </a>
+              <a 
+                href="https://www.instagram.com/tholle233/" 
+                target="_blank" 
+                rel="noopener noreferrer" 
+                aria-label="Instagram" 
+                className="hover:opacity-70 transition-opacity"
+              >
+                <img src="/icons/instagram.svg" alt="Instagram" className="w-8 h-8" />
+              </a>
+              <a 
+                href="https://x.com/thollem233" 
+                target="_blank" 
+                rel="noopener noreferrer" 
+                aria-label="X (Twitter)" 
+                className="hover:opacity-70 transition-opacity"
+              >
+                <img src="/icons/x.svg" alt="X (Twitter)" className="w-8 h-8" />
+              </a>
+              <a 
+                href="https://web.facebook.com/tholhath.mohamed.77" 
+                target="_blank" 
+                rel="noopener noreferrer" 
+                aria-label="Facebook" 
+                className="hover:opacity-70 transition-opacity"
+              >
+                <img src="/icons/facebook.svg" alt="Facebook" className="w-8 h-8" />
+              </a>
+            </div>
           </div>
         </section>
       </main>
 
       {/* Footer */}
-      <footer className="border-t border-border py-8">
-        <div className="max-w-3xl mx-auto px-6 text-center text-sm text-muted-foreground">
-          © {new Date().getFullYear()}
-        </div>
-      </footer>
+      <Footer />
     </div>
   );
 };
