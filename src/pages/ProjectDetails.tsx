@@ -47,7 +47,7 @@ const ProjectDetails = () => {
         </Link>
 
         {/* Project Header */}
-        <header className="mb-12">
+        <header className="mb-5">
           <h1 className="text-4xl font-light tracking-tight mb-4">
             {project.title}
           </h1>
@@ -67,6 +67,19 @@ const ProjectDetails = () => {
           </div>
           <p className="text-lg text-muted-foreground">{project.description}</p>
         </header>
+        {/* Website Link */}
+        {project.website && (
+          <section className="mb-12">
+            <a
+              href={project.website}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="relative inline-flex items-center gap-2 text-sm text-muted-foreground hover:text-foreground transition-colors after:absolute after:left-0 after:-bottom-0.5 after:h-[1.5px] after:w-full after:bg-current after:origin-right after:scale-x-0 after:transition-transform after:duration-300 hover:after:origin-left hover:after:scale-x-100 border border-border rounded-md px-3 py-1"
+            >
+              Visit Website
+            </a>
+          </section>
+        )}
 
         {/* Project Images */}
         {project.images && project.images.length > 0 && (

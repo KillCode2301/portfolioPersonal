@@ -51,8 +51,11 @@ const Index = () => {
                 <h3 className="text-lg font-medium mb-2 group-hover:text-foreground transition-colors">
                   {project.title}
                 </h3>
-                <p className="text-muted-foreground text-sm">
+                <p className="text-muted-foreground text-sm mb-3">
                   {project.description}
+                </p>
+                <p className="text-muted-foreground text-sm">
+                  {project.company}
                 </p>
               </Link>
             ))}
@@ -69,6 +72,7 @@ const Index = () => {
               <div key={index} className="group p-6 -mx-6 rounded-lg hover:bg-card transition-colors border border-border">
                 <h3 className="text-lg font-medium mb-2 group-hover:text-foreground transition-colors">{experience.role}</h3>
                 <p className="text-sm text-muted-foreground mb-2">{experience.company}</p>
+                <p className="text-sm text-muted-foreground mb-2">{experience.period}</p>
                 <p className="text-sm text-foreground/70">{experience.description}</p>
               </div>
             ))}
