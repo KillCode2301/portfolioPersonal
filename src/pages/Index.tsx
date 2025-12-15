@@ -23,7 +23,7 @@ const Index = () => {
 
         {/* About */}
         <section id="about" className="mb-32 scroll-mt-24">
-          <h2 className="text-2xl uppercase tracking-widest text-foreground mb-6">
+          <h2 className="text-3xl font-light uppercase tracking-widest text-foreground mb-6">
             About
           </h2>
           <p className="text-lg leading-relaxed text-foreground/90">
@@ -38,7 +38,7 @@ const Index = () => {
 
         {/* Projects */}
         <section id="projects" className="mb-32 scroll-mt-24">
-          <h2 className="text-2xl uppercase tracking-widest text-foreground mb-8">
+          <h2 className="text-3xl font-light uppercase tracking-widest text-foreground mb-8">
             Projects
           </h2>
           <div className="space-y-8">
@@ -64,7 +64,7 @@ const Index = () => {
 
         {/* Experience */}
         <section id="experience" className="scroll-mt-24">
-          <h2 className="text-2xl uppercase tracking-widest text-foreground mb-8">
+          <h2 className="text-3xl font-light uppercase tracking-widest text-foreground mb-8">
             Experiences
           </h2>
           <div className="space-y-10">
@@ -81,7 +81,7 @@ const Index = () => {
 
         {/*Connect*/}
         <section id="connect" className="scroll-mt-24 mt-32">
-          <h2 className="text-2xl uppercase tracking-widest text-foreground mb-8">
+          <h2 className="text-3xl font-light uppercase tracking-widest text-foreground mb-8">
             Connect
           </h2>
           <div className="space-y-6">
