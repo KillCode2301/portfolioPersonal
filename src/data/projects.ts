@@ -52,11 +52,7 @@ export const projects: Project[] = [
     company: "NIGHTS AND WEEKENDS PVT LTD",
     date: "2025 - Present",
     images: [
-      "/cafetImages/cafet1.png",
-      "/cafetImages/cafet2.png",
-      "/cafetImages/cafet3.png",
-      "/cafetImages/cafet4.png",
-      "/cafetImages/cafet5.png",
+      "/cafetabImages/cafetab1.png",
     ],
     longDescription:
       "CafeTab is a mobile-first cafe management and POS system built specifically for cafe owners in the Maldives. Designed to simplify daily operations, it combines point-of-sale functionality with customer credit management, reporting, and menu management in a single intuitive platform.\n\nCafe owners use CafeTab to manage orders, track sales, maintain customer credit accounts, and create digital menus directly from the mobile app, with a complementary web dashboard for broader management and reporting. The system supports cash and bank transfer payment tracking, reflecting real-world workflows used by local SMEs.\n\nCustomers benefit from transparency and convenience through access to the cafe’s menu and their personal credit history, allowing them to view outstanding balances and past credit-based purchases when items are added by the owner.\n\nCafeTab also provides detailed sales reports and analytics, invoice and receipt exporting, and structured customer credit lookups, helping owners maintain clear financial records and make informed business decisions. Built end-to-end by a single developer, the platform spans design, mobile development, web development, and backend infrastructure, delivering a practical and scalable solution tailored to the Maldivian cafe market.",
