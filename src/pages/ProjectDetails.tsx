@@ -4,7 +4,6 @@ import ImageCarousel from "@/components/ImageCarousel";
 import { projects } from "@/data/projects";
 
 // This would typically come from a shared data file or API
-// For now, keeping it here as hardcoded data
 
 const ProjectDetails = () => {
   const { id } = useParams<{ id: string }>();

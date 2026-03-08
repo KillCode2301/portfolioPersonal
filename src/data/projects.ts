@@ -51,11 +51,22 @@ export const projects: Project[] = [
       "A cafe management system for the Maldives. Built with Flutter, React, Node.js and Firebase.",
     company: "NIGHTS AND WEEKENDS PVT LTD",
     date: "2025 - Present",
-    images: [
-      "/cafetabImages/cafetab1.png",
-    ],
+    images: ["/cafetabImages/cafetab1.png"],
     longDescription:
       "CafeTab is a mobile-first cafe management and POS system built specifically for cafe owners in the Maldives. Designed to simplify daily operations, it combines point-of-sale functionality with customer credit management, reporting, and menu management in a single intuitive platform.\n\nCafe owners use CafeTab to manage orders, track sales, maintain customer credit accounts, and create digital menus directly from the mobile app, with a complementary web dashboard for broader management and reporting. The system supports cash and bank transfer payment tracking, reflecting real-world workflows used by local SMEs.\n\nCustomers benefit from transparency and convenience through access to the cafe’s menu and their personal credit history, allowing them to view outstanding balances and past credit-based purchases when items are added by the owner.\n\nCafeTab also provides detailed sales reports and analytics, invoice and receipt exporting, and structured customer credit lookups, helping owners maintain clear financial records and make informed business decisions. Built end-to-end by a single developer, the platform spans design, mobile development, web development, and backend infrastructure, delivering a practical and scalable solution tailored to the Maldivian cafe market.",
     technologies: ["Flutter", "Dart", "React", "Node.js", "Firebase"],
+  },
+  {
+    id: "4",
+    title: "Maldives Post Toolbox",
+    website: "https://maldivesposttoolbox.com",
+    description:
+      "An internal operational toolbox built for Maldives Post Limited to streamline mail operations, reduce manual work, and centralize essential operational tools.",
+    company: "MALDIVES POST LIMITED",
+    date: "2024 - 2026",
+    images: ["/mvposttoolboximages/post1.png"],
+    longDescription:
+      "Maldives Post Toolbox is an internal operational platform developed to support and streamline the daily workflows of Maldives Post Limited’s mail operations teams.\n\nThe platform centralizes essential operational utilities used by mail operations staff, supervisors, and senior personnel. One of its primary tools helps identify incoming customs bonded boxes from e-commerce shipments, improving visibility and monitoring of international parcel flows. Another core module is the Post Office Mail Noting Tool, which enables staff to record and track daily incoming mail across post offices, helping teams monitor items within the operational pipeline.\n\nThe system processes operational data from spreadsheets, images, and PDF documents, transforming them into structured information that can be quickly reviewed and tracked. By digitizing previously manual workflows, the platform significantly reduces manual data handling while improving operational transparency and reporting speed.\n\nBuilt as both a mobile and web tool using Flutter and Firebase, Maldives Post Toolbox provides a centralized and accessible solution for operational staff, enabling faster decision-making and improved efficiency across mail processing operations.",
+    technologies: ["Flutter", "Dart", "Firebase"],
   },
 ];
