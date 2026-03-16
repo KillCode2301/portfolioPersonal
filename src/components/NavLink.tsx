@@ -1,6 +1,7 @@
 import { NavLink as RouterNavLink, NavLinkProps } from "react-router-dom";
-import { forwardRef } from "react";
+import { forwardRef, useEffect } from "react";
 import { cn } from "@/lib/utils";
+import { usePostHog } from "@posthog/react";
 
 interface NavLinkCompatProps extends Omit<NavLinkProps, "className"> {
   className?: string;
@@ -19,6 +20,12 @@ const NavLink = forwardRef<HTMLAnchorElement, NavLinkCompatProps>(
     },
     ref
   ) => {
+    const posthog = usePostHog();
+    useEffect(() => {
+      posthog.capture("nav_link_click", {
+        to,
+      });
+    }, [to]);
     return (
       <RouterNavLink
         ref={ref}
