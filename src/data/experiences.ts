@@ -16,14 +16,14 @@ export const experiences: Experience[] = [
   {
     role: "Co-Founder",
     company: "MODEXX PEST",
-    period: "2022 - Present (Part-time)",
+    period: "2022 - 2024",
     description:
       "Co-founding and leading the development of MODEXX PEST, a pest control company in the Maldives specializing in pest control and pest cetrification services.",
   },
   {
     role: "Founder and Owner",
     company: "INVERSE INVESTMENT (Formerly known as OCTECH MALDIVES)",
-    period: "2022 - Present (Part-time)",
+    period: "2022 - 2025",
     description:
       "Founder and Owner of INVERSE INVESTMENT, a Logistics and Transportation company in the Maldives. Specializing in Freight Forwarding, Customs Clearance, and Logistics Services.",
   },
